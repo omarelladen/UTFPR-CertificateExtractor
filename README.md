@@ -22,5 +22,6 @@ pip install pypdf
 
 ## Run
 ```sh
+source .venv/bin/activate
 python3 src/extract_certificates.py <input_dir> [output_dir]
 ```
