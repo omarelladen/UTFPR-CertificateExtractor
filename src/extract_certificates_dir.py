@@ -112,6 +112,6 @@ extracted_data_path = os.path.join(OUTPUT_DIR, "extracted_data.csv")
 save_csv(extracted_data_path, list_data)
 print(f"Extracted data saved in {extracted_data_path}")
 
-errors_path = os.path.join(OUTPUT_DIR, "errors.csv")
+errors_path = os.path.join(OUTPUT_DIR, "errors.txt")
 save_csv(errors_path, list_failed)
 print(f"Errors saved in {errors_path}")
