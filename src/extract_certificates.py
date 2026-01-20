@@ -97,14 +97,11 @@ for f in os.listdir(input_dir):
             url   = m.group(9)
 
             list_data.append([
-                name,
-                role,
+                hours,
                 event,
                 dep,
                 org,
                 date,
-                hours,
-                emit,
                 url,
             ])
 
