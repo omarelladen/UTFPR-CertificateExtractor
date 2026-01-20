@@ -14,5 +14,5 @@ pip install pypdf
 
 ## Run
 ```sh
-python3 src/extract_certificates_dir.py <dir>
+python3 src/extract_certificates.py <input_dir> [output_dir]
 ```
