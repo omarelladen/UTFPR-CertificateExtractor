@@ -5,6 +5,14 @@ extracurricular activities. This can help students count how many
 hours they have spent and automatically create a CSV table with
 all the information.
 
+## Supported Standard
+```
+Declaramos que <name> participou como <role> do evento|projeto
+de extensão <event>, promovido pelo(a) <dep> da <org>,
+realizado no período de <date> dedicando <hours> hora\(s\).
+Emitida pelo <emit>
+a autenticidade deste documento pode ser verificada através da URL: <url>
+```
 ## Install dependencies (Linux)
 ```sh
 python3 -m venv .venv
