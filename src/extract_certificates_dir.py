@@ -60,9 +60,9 @@ if len(sys.argv) < 2:
 input_dir = sys.argv[1]
 
 if len(sys.argv) >= 3:
-    OUTPUT_DIR = sys.argv[2]
+    output_dir = sys.argv[2]
 else:
-    OUTPUT_DIR = DEFAULT_OUTPUT_DIR
+    output_dir = DEFAULT_OUTPUT_DIR
 
 if not os.path.isdir(input_dir):
     print("Directory not found!")
@@ -123,16 +123,16 @@ print()
 print(f"Total hours: {total_hours}\n")
 
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(output_dir, exist_ok=True)
 
-hours_path = os.path.join(OUTPUT_DIR, "hours.txt")
+hours_path = os.path.join(output_dir, "hours.txt")
 save_csv(hours_path, [[total_hours]])
 print(f"Total hours saved in {hours_path}")
 
-extracted_data_path = os.path.join(OUTPUT_DIR, "extracted_data.csv")
+extracted_data_path = os.path.join(output_dir, "extracted_data.csv")
 save_csv(extracted_data_path, list_data)
 print(f"Extracted data saved in {extracted_data_path}")
 
-errors_path = os.path.join(OUTPUT_DIR, "errors.txt")
+errors_path = os.path.join(output_dir, "errors.txt")
 save_csv(errors_path, list_failed)
 print(f"Errors saved in {errors_path}")
