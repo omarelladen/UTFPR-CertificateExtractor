@@ -65,7 +65,7 @@ else:
     output_dir = DEFAULT_OUTPUT_DIR
 
 if not os.path.isdir(input_dir):
-    print("Directory not found!")
+    print("Input directory not found!")
     sys.exit(1)
 
 
