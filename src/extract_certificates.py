@@ -57,6 +57,7 @@ if len(sys.argv) < 2:
         "  python3 src/extract_certificates.py input/ output/\n"
     )
     sys.exit(1)
+
 input_dir = sys.argv[1]
 
 if len(sys.argv) >= 3:
@@ -111,10 +112,11 @@ for f in os.listdir(input_dir):
             list_failed.append([f])
 
 
-print("Failed to extract data from:")
-for f in list_failed:
-    print("-", f[0])
-print()
+if len(list_failed) > 0:
+    print("Failed to extract data from non standard certificates:")
+    for f in list_failed:
+        print("-", f[0])
+    print()
 
 
 print(f"Total hours: {total_hours}\n")
