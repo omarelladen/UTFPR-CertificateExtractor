@@ -1,9 +1,9 @@
 # UTFPR Certificate Extractor
 
 This is a script to extract data from standard UTFPR certificates for
-extracurricular activities. It can help students count how many
-hours they have spent and automatically create a CSV table with
-the information.
+extracurricular activities inside a directory.
+It can help students count how many hours they have spent
+and automatically create a CSV table with the relevant information.
 
 ## Supported Standard
 ```
@@ -16,12 +16,12 @@ a autenticidade deste documento pode ser verificada através da URL: <url>
 ```
 
 ## Install dependencies
-### Debian package
+### Debian Linux package
 ```sh
 sudo apt install python3-pypdf
 ```
 
-### or with pip (from PyPI)
+### or from PyPI with pip
 
 #### Linux
 ```sh
@@ -39,6 +39,10 @@ pip install pypdf
 ```
 
 ## Run
+Arguments:
+- <input_dir>: Input directory with the certificates (required)
+- [output_dir]: Output directory (optional) (default: output/)
+
 ### Linux
 ```sh
 python3 extract_certificates.py <input_dir> [output_dir]
@@ -48,3 +52,7 @@ python3 extract_certificates.py <input_dir> [output_dir]
 ```sh
 python extract_certificates.py <input_dir> [output_dir]
 ```
+
+Examples:
+- python3 extract_certificates.py input/
+- python3 extract_certificates.py input/ output/
