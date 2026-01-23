@@ -36,7 +36,7 @@ PATTERN_STD = (
 )
 
 
-def save_csv(path, list_data):
+def save_file(path, list_data):
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerows(list_data)
@@ -79,6 +79,7 @@ if not os.path.isdir(input_dir):
 
 list_extracted_data = []
 list_extracted_data.append(["hours", "event", "org", "date", "url"])
+
 list_failed = []
 total_hours = 0
 for f in os.listdir(input_dir):
@@ -104,13 +105,7 @@ for f in os.listdir(input_dir):
             emit  = m.group(8)
             url   = m.group(9)
 
-            list_extracted_data.append([
-                hours,
-                event,
-                org,
-                date,
-                url,
-            ])
+            list_extracted_data.append([hours, event, org, date, url])
 
             total_hours += int(hours)
 
@@ -129,13 +124,13 @@ print(f"Total hours extracted: {total_hours}\n")
 
 
 extracted_data_path = os.path.join(output_dir, "extracted_data.csv")
-save_csv(extracted_data_path, list_extracted_data)
+save_file(extracted_data_path, list_extracted_data)
 print(f"Extracted data saved in {extracted_data_path}")
 
 errors_path = os.path.join(output_dir, "errors.txt")
-save_csv(errors_path, list_failed)
+save_file(errors_path, list_failed)
 print(f"Errors saved in {errors_path}")
 
 hours_path = os.path.join(output_dir, "hours.txt")
-save_csv(hours_path, [[total_hours]])
+save_file(hours_path, [[total_hours]])
 print(f"Total hours saved in {hours_path}")
