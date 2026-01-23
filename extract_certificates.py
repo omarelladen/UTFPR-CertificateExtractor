@@ -131,10 +131,10 @@ extracted_data_path = os.path.join(output_dir, "extracted_data.csv")
 save_file(extracted_data_path, list_extracted_data)
 print(f"Extracted data saved in {extracted_data_path}")
 
-errors_path = os.path.join(output_dir, "errors.txt")
-save_file(errors_path, list_failed)
-print(f"Errors saved in {errors_path}")
-
 hours_path = os.path.join(output_dir, "hours.txt")
 save_file(hours_path, [[total_hours]])
 print(f"Total hours saved in {hours_path}")
+
+errors_path = os.path.join(output_dir, "errors.txt")
+save_file(errors_path, list_failed)
+print(f"Errors saved in {errors_path}")
