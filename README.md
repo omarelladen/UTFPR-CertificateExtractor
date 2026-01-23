@@ -5,6 +5,7 @@ extracurricular activities inside a directory.
 It can help students count how many hours they have spent
 and automatically create a CSV table with the relevant information.
 
+
 ## Supported Standard
 ```
 Declaramos que <name> participou como <role> do evento|projeto
@@ -14,6 +15,7 @@ Emitida pelo <emit>
 
 a autenticidade deste documento pode ser verificada através da URL: <url>
 ```
+
 
 ## Install dependencies
 ### Debian Linux package
@@ -38,10 +40,8 @@ venv\Scripts\activate
 pip install pypdf
 ```
 
+
 ## Run
-Arguments:
-- <input_dir>: Input directory with the certificates (required)
-- [output_dir]: Output directory (optional) (default: output/)
 
 ### Linux
 ```sh
@@ -52,6 +52,10 @@ python3 extract_certificates.py <input_dir> [output_dir]
 ```sh
 python extract_certificates.py <input_dir> [output_dir]
 ```
+
+Arguments:
+- <input_dir>: Input directory with the certificates (required)
+- [output_dir]: Output directory (optional) (default: output/)
 
 Examples:
 - python3 extract_certificates.py input/
