@@ -77,6 +77,8 @@ if not os.path.isdir(input_dir):
     sys.exit(1)
 
 
+# Extraction
+
 list_extracted_data = []
 list_extracted_data.append(["hours", "event", "org", "date", "url"])
 
@@ -112,6 +114,8 @@ for f in os.listdir(input_dir):
         else:
             list_failed.append([f])
 
+
+# Results
 
 if len(list_failed) > 0:
     print("Failed to extract data from non standard certificates:")
