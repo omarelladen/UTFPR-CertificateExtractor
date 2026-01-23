@@ -41,10 +41,10 @@ pip install pypdf
 ## Run
 ### Linux
 ```sh
-python3 src/extract_certificates.py <input_dir> [output_dir]
+python3 extract_certificates.py <input_dir> [output_dir]
 ```
 
 ### Windows
 ```sh
-python src/extract_certificates.py <input_dir> [output_dir]
+python extract_certificates.py <input_dir> [output_dir]
 ```

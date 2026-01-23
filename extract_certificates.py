@@ -46,7 +46,7 @@ def save_file(path, list_data):
 if len(sys.argv) < 2:
     print(
         "Usage:\n"
-        "  python3 src/extract_certificates.py <input_dir> [output_dir]\n"
+        "  python3 extract_certificates.py <input_dir> [output_dir]\n"
         "\n"
         "Arguments:\n"
         "  <input_dir>   Input directory path (required)\n"
@@ -54,8 +54,8 @@ if len(sys.argv) < 2:
        f"                (default: {DEFAULT_OUTPUT_DIR}/)\n"
         "\n"
         "Examples:\n"
-        "  python3 src/extract_certificates.py input/\n"
-        "  python3 src/extract_certificates.py input/ output/\n"
+        "  python3 extract_certificates.py input/\n"
+        "  python3 extract_certificates.py input/ output/\n"
     )
     sys.exit(1)
 
