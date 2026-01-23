@@ -1,9 +1,9 @@
 # UTFPR Certificate Extractor
 
 This is a script to extract data from standard UTFPR certificates for
-extracurricular activities. This can help students count how many
+extracurricular activities. It can help students count how many
 hours they have spent and automatically create a CSV table with
-all the information.
+ the information.
 
 ## Supported Standard
 ```
@@ -13,6 +13,7 @@ realizado no período de <date> dedicando <hours> hora\(s\).
 Emitida pelo <emit>
 a autenticidade deste documento pode ser verificada através da URL: <url>
 ```
+
 ## Install dependencies (Linux)
 ```sh
 python3 -m venv .venv
