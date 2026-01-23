@@ -8,7 +8,7 @@ hours they have spent and automatically create a CSV table with
 ## Supported Standard
 ```
 Declaramos que <name> participou como <role> do evento|projeto
-de extensão <event>, promovido pelo(a) <dep> da <org>,
+de extensão <event>, promovido pelo(a) <org> da <inst>,
 realizado no período de <date> dedicando <hours> hora\(s\).
 Emitida pelo <emit>
 a autenticidade deste documento pode ser verificada através da URL: <url>

@@ -77,7 +77,8 @@ if not os.path.isdir(input_dir):
     sys.exit(1)
 
 
-list_data = []
+list_extracted_data = []
+list_extracted_data.append(["hours", "event", "org", "date", "url"])
 list_failed = []
 total_hours = 0
 for f in os.listdir(input_dir):
@@ -96,17 +97,17 @@ for f in os.listdir(input_dir):
             name  = m.group(1)
             role  = m.group(2)
             event = m.group(3)
-            dep   = m.group(4)
-            org   = m.group(5)
+            org   = m.group(4)
+            inst  = m.group(5)
             date  = m.group(6)
             hours = m.group(7)
             emit  = m.group(8)
             url   = m.group(9)
 
-            list_data.append([
+            list_extracted_data.append([
                 hours,
                 event,
-                dep,
+                org,
                 date,
                 url,
             ])
@@ -128,7 +129,7 @@ print(f"Total hours extracted: {total_hours}\n")
 
 
 extracted_data_path = os.path.join(output_dir, "extracted_data.csv")
-save_csv(extracted_data_path, list_data)
+save_csv(extracted_data_path, list_extracted_data)
 print(f"Extracted data saved in {extracted_data_path}")
 
 errors_path = os.path.join(output_dir, "errors.txt")
