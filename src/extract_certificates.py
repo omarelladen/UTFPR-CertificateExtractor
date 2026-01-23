@@ -42,6 +42,7 @@ def save_csv(path, list_data):
         writer.writerows(list_data)
 
 
+# Check if args are sufficient
 if len(sys.argv) < 2:
     print(
         "Usage:\n"
@@ -60,11 +61,17 @@ if len(sys.argv) < 2:
 
 input_dir = sys.argv[1]
 
+
+# Check if output dir was provided
 if len(sys.argv) >= 3:
     output_dir = sys.argv[2]
 else:
     output_dir = DEFAULT_OUTPUT_DIR
 
+os.makedirs(output_dir, exist_ok=True)
+
+
+# Check if input dir exists
 if not os.path.isdir(input_dir):
     print("Input directory not found!")
     sys.exit(1)
@@ -84,7 +91,6 @@ for f in os.listdir(input_dir):
         for old, new in map_replace.items():
             text = text.replace(old, new)
 
-
         m = re.search(PATTERN_STD, text)
         if m:
             name  = m.group(1)
@@ -101,7 +107,6 @@ for f in os.listdir(input_dir):
                 hours,
                 event,
                 dep,
-                org,
                 date,
                 url,
             ])
@@ -119,14 +124,8 @@ if len(list_failed) > 0:
     print()
 
 
-print(f"Total hours: {total_hours}\n")
+print(f"Total hours extracted: {total_hours}\n")
 
-
-os.makedirs(output_dir, exist_ok=True)
-
-hours_path = os.path.join(output_dir, "hours.txt")
-save_csv(hours_path, [[total_hours]])
-print(f"Total hours saved in {hours_path}")
 
 extracted_data_path = os.path.join(output_dir, "extracted_data.csv")
 save_csv(extracted_data_path, list_data)
@@ -135,3 +134,7 @@ print(f"Extracted data saved in {extracted_data_path}")
 errors_path = os.path.join(output_dir, "errors.txt")
 save_csv(errors_path, list_failed)
 print(f"Errors saved in {errors_path}")
+
+hours_path = os.path.join(output_dir, "hours.txt")
+save_csv(hours_path, [[total_hours]])
+print(f"Total hours saved in {hours_path}")
