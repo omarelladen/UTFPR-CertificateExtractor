@@ -28,7 +28,7 @@ sudo apt install python3-pypdf
 #### Linux
 ```sh
 python3 -m venv .venv
-source .venv/bin/activate
+. .venv/bin/activate
 pip install pypdf
 ```
 
