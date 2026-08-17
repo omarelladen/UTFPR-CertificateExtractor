@@ -1,3 +1,6 @@
+# Copyright 2025-2026 Omar Zagonel El Laden                                                                  29     fr" pelo\(a\) ({PATTERN_STR}) da"                                                                
+# SPDX-License-Identifier: GPL-3.0-only
+
 import sys
 import csv
 import re
@@ -46,7 +49,7 @@ def save_file(path, list_data):
 if len(sys.argv) < 2:
     print(
         "Usage:\n"
-        "  python3 extract_certificates.py <input_dir> [output_dir]\n"
+        "  python3 main.py <input_dir> [output_dir]\n"
         "\n"
         "Arguments:\n"
         "  <input_dir>   Input directory with the certificates (required)\n"
@@ -54,8 +57,8 @@ if len(sys.argv) < 2:
        f"                (default: {DEFAULT_OUTPUT_DIR}/)\n"
         "\n"
         "Examples:\n"
-        "  python3 extract_certificates.py input/\n"
-        "  python3 extract_certificates.py input/ output/\n"
+        "  python3 main.py input/\n"
+        "  python3 main.py input/ output/\n"
     )
     sys.exit(1)
 
