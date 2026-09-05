@@ -31,6 +31,6 @@ python main.py <input_dir> [output_dir]
 ```
 
 ## License
-[GPL-3](./LICENSE)
+[GPLv3](./LICENSE)
 
 Copyright 2026 Omar Zagonel El Laden
