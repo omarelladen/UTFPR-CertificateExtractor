@@ -1,4 +1,4 @@
-# Copyright 2025-2026 Omar Zagonel El Laden                                                                  29     fr" pelo\(a\) ({PATTERN_STR}) da"                                                                
+# Copyright 2025-2026 Omar Zagonel El Laden
 # SPDX-License-Identifier: GPL-3.0-only
 
 import sys
